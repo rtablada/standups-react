@@ -1,8 +1,8 @@
-import {Component} from 'react';
+import React, { Component } from 'react';
 import { Router, Route, Link, browserHistory } from 'react-router';
 import App from './components/app';
 
-export default class extends Component {
+class RouterContainer extends Component {
   render() {
     return (
       <Router history={browserHistory}>
@@ -12,3 +12,5 @@ export default class extends Component {
     )
   }
 }
+
+export default RouterContainer
