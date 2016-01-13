@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Router, Route, Link, browserHistory } from 'react-router';
-import App from './components/app';
+import App from './routes/app';
 
 class RouterContainer extends Component {
   render() {
@@ -13,4 +13,4 @@ class RouterContainer extends Component {
   }
 }
 
-export default RouterContainer
+export default RouterContainer;
