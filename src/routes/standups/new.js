@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TeamMemberInput from './components/team-member-input';
 
 class StandupsNew extends Component {
   componentDidMount() {
@@ -7,12 +8,18 @@ class StandupsNew extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h2>Standups</h2>
 
-        {this.props.state.currentStandup.teamMembers.map((name) => {
-          return <li>{name}</li>;
-        })}
+        <table>
+          <tbody>
+            {this.props.state.currentStandup.teamMembers.map((name) => {
+              return (<TeamMemberInput
+                teamMember={name}
+                registerChild={this.props.actions.standupRegisterInputGather}/>);
+            })}
+          </tbody>
+        </table>
       </div>
     );
   }

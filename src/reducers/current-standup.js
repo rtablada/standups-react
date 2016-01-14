@@ -10,4 +10,15 @@ export default combineReducers({
         return state;
     }
   },
+
+  inputGatherers(state = [], action = {}) {
+    switch (action.type) {
+      case 'STANDUP_START':
+        return [];
+      case 'REGISTER_INPUT_GATHERER':
+        return [...state, action.callback];
+      default:
+        return state;
+    }
+  },
 }, null);
