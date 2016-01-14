@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class StandupsNew extends Component {
   componentDidMount() {
-    debugger;
+    this.props.actions.startStandup();
   }
 
   render() {
