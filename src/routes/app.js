@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div>
         <Navbar />
-        <h1>Standups</h1>
+        {this.props.children}
       </div>
     );
   }
