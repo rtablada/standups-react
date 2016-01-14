@@ -1,19 +1,37 @@
 import React, { Component } from 'react';
 import { Router, Route, Link, browserHistory } from 'react-router';
-import App from './routes/app';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
+import App from './routes/app';
 import StandupsIndex from './routes/standups/index';
 import StandupsNew from './routes/standups/new';
+import ActionCreators from './actions/index';
+
+function mapStateToProps(state) {
+  return {state};
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(ActionCreators, dispatch),
+  };
+}
+
+const stateConnect = connect(
+  mapStateToProps,
+  mapDispatchToProps
+);
 
 const routeConfig = [
   {
     path: '/',
-    component: App,
-    indexRoute: {component: StandupsIndex},
+    component: stateConnect(App),
+    indexRoute: {component: stateConnect(StandupsIndex)},
     childRoutes: [
       {
         path: 'new',
-        component: StandupsNew,
+        component: stateConnect(StandupsNew),
       },
     ],
   },
