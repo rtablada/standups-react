@@ -1,12 +1,11 @@
-import history from '../../history-store';
-import moment from 'moment';
-
-export default (standup) => {
-  const date = moment(standup.date);
-  history.pushState(null, `/standup/${date.format('MM/DD/YY')}`);
-
-  return {
-    type: 'STANDUP_SAVED',
-    standup,
+export default () => {
+  return (dispatch, getState) => {
+    dispatch({
+      type: 'STANDUP_START',
+    });
+    dispatch({
+      type: 'RANDOMIZE_TEAM',
+      teamMembers: getState().teamMembers,
+    });
   };
 };

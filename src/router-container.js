@@ -5,9 +5,11 @@ import {connect} from 'react-redux';
 import history from './history-store';
 
 import App from './routes/app';
+import ActionCreators from './actions/index';
+
 import StandupsIndex from './routes/standups/index';
 import StandupsNew from './routes/standups/new';
-import ActionCreators from './actions/index';
+import StandupDetail from './routes/standups/detail';
 
 function mapStateToProps(state) {
   return {state};
@@ -33,6 +35,10 @@ const routeConfig = [
       {
         path: 'new',
         component: stateConnect(StandupsNew),
+      },
+      {
+        path: 'standup/:month/:day/:year',
+        component: stateConnect(StandupDetail),
       },
     ],
   },
