@@ -17,6 +17,14 @@ class StandupsNew extends Component {
         <h2>Standups</h2>
 
         <table>
+          <thead>
+            <tr className="flexi-row">
+              <th></th>
+              <th>Done</th>
+              <th>Next</th>
+              <th>Help</th>
+            </tr>
+          </thead>
           <tbody>
             {this.props.state.currentStandup.teamMembers.map((name, index) => {
               return (<TeamMemberInput key={index}

@@ -16,11 +16,11 @@ class StandupsNew extends Component {
 
   render() {
     return (
-      <tr>
+      <tr className="flexi-row">
         <td>{this.props.teamMember}</td>
-        <td><input type="text" ref="done" placeholder="Done" /></td>
-        <td><input type="text" ref="work" placeholder="Needs Work" /></td>
-        <td><input type="text" ref="help" placeholder="Needs Help" /></td>
+        <td><textarea type="text" ref="done" placeholder="Done" /></td>
+        <td><textarea type="text" ref="work" placeholder="Needs Work" /></td>
+        <td><textarea type="text" ref="help" placeholder="Needs Help" /></td>
       </tr>
     );
   }
