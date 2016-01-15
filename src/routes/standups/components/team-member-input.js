@@ -6,7 +6,12 @@ class StandupsNew extends Component {
   }
 
   getInput() {
-    console.log(this.refs.done, this.refs.work, this.refs.help);
+    return {
+      teamMember: this.props.teamMember,
+      done: this.refs.done.value,
+      work: this.refs.work.value,
+      help: this.refs.help.value,
+    };
   }
 
   render() {

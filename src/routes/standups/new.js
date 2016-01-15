@@ -6,9 +6,13 @@ class StandupsNew extends Component {
     this.props.actions.startStandup();
   }
 
+  handleSubmit() {
+    this.props.actions.submitStandup();
+  }
+
   render() {
     return (
-      <div className="container">
+      <form className="container" onSubmit={(e) => this.handleSubmit(e)}>
         <h2>Standups</h2>
 
         <table>
@@ -20,7 +24,9 @@ class StandupsNew extends Component {
             })}
           </tbody>
         </table>
-      </div>
+
+        <button>Submit</button>
+      </form>
     );
   }
 }
