@@ -13,8 +13,8 @@ class StandupsNew extends Component {
 
         <table>
           <tbody>
-            {this.props.state.currentStandup.teamMembers.map((name) => {
-              return (<TeamMemberInput
+            {this.props.state.currentStandup.teamMembers.map((name, index) => {
+              return (<TeamMemberInput key={index}
                 teamMember={name}
                 registerChild={this.props.actions.standupRegisterInputGather}/>);
             })}
