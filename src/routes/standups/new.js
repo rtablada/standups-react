@@ -6,7 +6,8 @@ class StandupsNew extends Component {
     this.props.actions.startStandup();
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     this.props.actions.submitStandup();
   }
 

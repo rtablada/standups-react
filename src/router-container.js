@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Router, Route, Link, browserHistory } from 'react-router';
+import { Router, Route, Link } from 'react-router';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import history from './history-store';
 
 import App from './routes/app';
 import StandupsIndex from './routes/standups/index';
@@ -40,7 +41,7 @@ const routeConfig = [
 class RouterContainer extends Component {
   render() {
     return (
-      <Router history={browserHistory} routes={routeConfig} />
+      <Router history={history} routes={routeConfig} />
     );
   }
 }

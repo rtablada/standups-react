@@ -1,5 +1,5 @@
 {
-  "name": "react-transform-boilerplate",
+  "name": "standups",
   "version": "1.0.0",
   "description": "A new Webpack boilerplate with hot reloading React components, and error handling on module and component level.",
   "scripts": {
@@ -53,6 +53,7 @@
   "dependencies": {
     "history": "^1.17.0",
     "jquery": "^2.2.0",
+    "moment": "^2.11.1",
     "react": "^0.14.6",
     "react-bootstrap": "^0.28.2",
     "react-dom": "^0.14.3",
