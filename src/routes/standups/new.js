@@ -12,6 +12,7 @@ class StandupsNew extends Component {
   }
 
   render() {
+    const {teamMembers} = this.props.state.currentStandup;
     return (
       <form className="container" onSubmit={(e) => this.handleSubmit(e)}>
         <h2>Standups</h2>
@@ -26,7 +27,7 @@ class StandupsNew extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.state.currentStandup.teamMembers.map((name, index) => {
+            {teamMembers.map((name, index) => {
               return (<TeamMemberInput key={index}
                 teamMember={name}
                 registerChild={this.props.actions.standupRegisterInputGather}/>);

@@ -8,7 +8,7 @@ export default class extends Component {
       <Navbar inverse staticTop>
         <Navbar.Header>
           <Navbar.Brand>
-            <IndexLink to="/">Standups</IndexLink>
+            <IndexLink to="/">React</IndexLink>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
